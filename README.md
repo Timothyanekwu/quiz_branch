@@ -54,7 +54,8 @@ Timothy - Frontend Dev
 Oluwatise Ajayi - Backend Developer 
 
 
-
+## Note:
+Always create a working branch, **Never** work on the main branch 
 
 ## QuizzCraft-Webapp
 This is the QuizzCraft web application.
