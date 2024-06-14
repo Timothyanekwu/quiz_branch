@@ -1,23 +1,52 @@
 import React from "react";
-import SideBar from "../PageComponent/sidebar";
-import Header from "../PageComponent/header";
+
 import Sub from "./sub";
-import TableSection from "./table";
+import TableSection from "../../../PageComponent/table";
 import Pagination from "./pagination";
 
 const Users = () => {
+  const dummyData = [
+    {
+      name: "John Doe",
+      institution: "University of Example",
+      matric_number: "UOE123456",
+      user_id: "user_001",
+      department: "Computer Science",
+    },
+    {
+      name: "Jane Smith",
+      institution: "Institute of Learning",
+      matric_number: "IOL654321",
+      user_id: "user_002",
+      department: "Mechanical Engineering",
+    },
+    {
+      name: "Alice Johnson",
+      institution: "Academy of Knowledge",
+      matric_number: "AOK112233",
+      user_id: "user_003",
+      department: "Biology",
+    },
+  ];
+
   return (
-    <div className="flex pl-[19.7vw] w-screen pr-10">
-      <SideBar />
+    <div>
       <div className="w-full">
-        <div>
-          <Header />
-        </div>
         <div>
           <Sub />
         </div>
         <div>
-          <TableSection />
+          <TableSection
+            heading={[
+              "Name",
+              "User ID",
+              "Institution",
+              "Matric No.",
+              "Department",
+              "Actions",
+            ]}
+            body={dummyData}
+          />
         </div>
         <div>
           <Pagination />

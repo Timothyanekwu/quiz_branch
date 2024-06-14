@@ -1,12 +1,12 @@
 import React from "react";
-import QuizSVG from "../../../../public/assets/svg/svg";
-import Dashboard from "../../../../public/assets/svg/dashboard";
-import Grade from "../../../../public/assets/svg/grades";
-import Library from "../../../../public/assets/svg/library";
-import Quizzes from "../../../../public/assets/svg/quizzes";
-import User from "../../../../public/assets/svg/user";
-import Setting from "../../../../public/assets/svg/settings";
-import Logout from "../../../../public/assets/svg/logout";
+import QuizSVG from "../../public/assets/svg/svg";
+import Dashboard from "../../public/assets/svg/dashboard";
+import Grade from "../../public/assets/svg/grades";
+import Library from "../../public/assets/svg/library";
+import Quizzes from "../../public/assets/svg/quizzes";
+import User from "../../public/assets/svg/user";
+import Setting from "../../public/assets/svg/settings";
+import Logout from "../../public/assets/svg/logout";
 import Link from "next/link";
 
 const SideBar = () => {
