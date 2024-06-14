@@ -1,6 +1,6 @@
 import React from "react";
-import LoginForm from "./loginForm";
-import QuizSVG from "../../../public/assets/svg/svg";
+import CreateForm from "./createForm";
+import QuizSVG from "../../../../public/assets/svg/svg";
 
 const Login = () => {
   return (
@@ -10,9 +10,9 @@ const Login = () => {
           <QuizSVG />
         </div>
         <div>
-          <LoginForm />
+          <CreateForm />
         </div>
-        <p className="mt-5 text-xs text-center text-white">
+        <p className="mt-5 text-xs text-center md:text-white text-[#9D75F7] ">
           Having trouble? Contact us
         </p>
       </div>
