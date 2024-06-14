@@ -2,7 +2,7 @@ import React from "react";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 
 interface ColorProps {
-  fillColor: string;
+  fillColor?: string;
 }
 
 const QuizSVG: React.FC<ColorProps> = ({ fillColor }) => {
