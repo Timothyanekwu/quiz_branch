@@ -3,8 +3,8 @@ import "../styles/global.scss";
 import { ChakraProvider } from "@chakra-ui/react";
 import { chakraTheme } from "@/configs/chakraTheme";
 import { useRouter } from "next/router";
-import Header from "../PageComponent/header";
-import SideBar from "../PageComponent/sidebar";
+import Header from "./PageComponent/header";
+import SideBar from "./PageComponent/sidebar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

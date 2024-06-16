@@ -1,7 +1,7 @@
 import React from "react";
 
 import Sub from "./sub";
-import TableSection from "../../../PageComponent/table";
+import TableSection from "../../PageComponent/table";
 import Pagination from "./pagination";
 
 const Users = () => {

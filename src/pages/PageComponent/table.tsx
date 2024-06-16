@@ -10,7 +10,6 @@ import {
   Td,
   TableContainer,
   Box,
-  Flex,
 } from "@chakra-ui/react";
 
 interface ColorProps {
@@ -29,12 +28,14 @@ const TableSection: React.FC<ColorProps> = ({ heading, body }) => {
             <Thead>
               <Tr
                 sx={{ textTransform: "capitalize" }}
+                fontSize="2.5rem"
                 backgroundColor="#E6E6E6"
                 color={"#656565"}
               >
                 {heading.map((field) => {
                   return (
                     <Th
+                      key={Math.random()}
                       sx={{ textTransform: "capitalize" }}
                       borderLeftRadius={
                         heading.indexOf(field) === 0 ? "40px" : "0px"
@@ -55,9 +56,9 @@ const TableSection: React.FC<ColorProps> = ({ heading, body }) => {
             <Tbody>
               {body.map((data) => {
                 return (
-                  <Tr fontSize={"small"}>
+                  <Tr key={Math.random()} fontSize={"0.75rem"}>
                     {Object.values(data).map((item) => {
-                      return <Td>{item}</Td>;
+                      return <Td key={Math.random()}>{item}</Td>;
                     })}
 
                     <>
