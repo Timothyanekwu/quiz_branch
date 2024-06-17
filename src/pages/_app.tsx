@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { AppProps } from "next/app";
 import "../styles/global.scss";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -8,15 +9,16 @@ import SideBar from "./PageComponent/sidebar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const [view, setView] = useState<boolean>(false);
 
   const isAdmin = router.pathname.startsWith("/admin");
   if (isAdmin) {
     return (
       <ChakraProvider theme={chakraTheme}>
-        <SideBar />
-        <div className="w-full pl-[19.7vw] pr-10 h-screen">
-          <Header />
+        <SideBar view={view} setView={setView} />
 
+        <div className="main">
+          <Header setView={setView} view />
           <Component {...pageProps} />
         </div>
       </ChakraProvider>

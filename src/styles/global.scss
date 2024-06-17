@@ -36,3 +36,75 @@ a {
 .fill-color {
   fill: red; /* Your fill color */
 }
+
+.side-position {
+  @apply bg-white h-screen w-[70%] fixed left-0 top-0 pl-10 shadow-md z-10;
+
+  @media (min-width: 426px) {
+    @apply w-[55%];
+  }
+
+  @media (min-width: 600px) {
+    @apply w-[40%];
+  }
+
+  @media (min-width: 1024px) {
+    @apply w-[19.7vw] shadow-none bg-none;
+  }
+}
+
+.main {
+  @apply w-full h-screen;
+
+  @media (min-width: 1024px) {
+    @apply pl-[19.7vw] pr-10;
+  }
+}
+
+.header-main {
+  @apply w-full py-10 flex justify-between flex-col-reverse sticky top-0 bg-white;
+
+  @media (min-width: 426px) {
+    @apply flex-row;
+  }
+}
+
+.header-avatar {
+  @apply mb-3 flex justify-between;
+}
+
+.header-input-container {
+  @apply w-full flex items-center;
+
+  @media (min-width: 426px) {
+    @apply w-[60%];
+  }
+
+  @media (min-width: 426px) {
+    @apply w-[60%];
+  }
+}
+
+.header-input-icons {
+  @apply flex h-full w-[25%] ml-4 items-center justify-between;
+
+  @media (min-width: 426px) {
+    @apply w-[20%];
+  }
+
+  @media (min-width: 1024px) {
+    @apply w-[90%] justify-normal;
+  }
+}
+
+.sub-method-container {
+  @apply flex text-xs items-center w-[75%] justify-end;
+
+  @media (min-width: 426px) {
+    @apply w-[60%];
+  }
+}
+
+.sub-method {
+  @apply hover:bg-[#9D75F7] cursor-pointer flex justify-center items-center px-2 rounded-full h-full hover:text-white;
+}

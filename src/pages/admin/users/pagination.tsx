@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Pagination = () => {
   return (
-    <div className="text-xs flex justify-center">
+    <div className="text-xs flex justify-center pb-16">
       <div className="h-full p-2 bg-[#E6E6E6] rounded-md">
         Items per page: 6
       </div>

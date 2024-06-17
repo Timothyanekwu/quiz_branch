@@ -17,3 +17,4 @@ export { default as Settings } from "./settings.svg";
 export { default as Svg } from "./svg.svg";
 export { default as Tick } from "./tick.svg";
 export { default as User } from "./user.svg";
+export { default as Burger } from "./burger.svg";

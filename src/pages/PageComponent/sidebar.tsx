@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
+import { Burger } from "../../../public/assets/icons";
 import {
   Dashboard,
   User,
@@ -11,7 +12,12 @@ import {
   Settings,
 } from "../../../public/assets/icons";
 
-const SideBar = () => {
+interface Datas {
+  view: boolean;
+  setView: Dispatch<SetStateAction<boolean>>;
+}
+
+const SideBar: React.FC<Datas> = ({ setView, view }) => {
   const navList = [
     {
       icon: <Dashboard className="text-xl mr-4" />,
@@ -24,7 +30,7 @@ const SideBar = () => {
       path: "/admin/users",
     },
     {
-      icon: <Library className="text-xl mr-4" />,
+      icon: <Library className="text-xl mr-4 stroke-2" />,
       value: "Library",
       path: "/admin/library",
     },
@@ -45,7 +51,11 @@ const SideBar = () => {
     { icon: <Logout className="text-xl mr-4" />, value: "Logout" },
   ];
   return (
-    <section className="h-screen w-[19.7vw] fixed left-0 top-0 pl-10">
+    <section className={`side-position ${!view ? "block" : "hidden"} lg:block`}>
+      <Burger
+        onClick={() => setView(!view)}
+        className={`w-7 h-7 sm:w-9 sm:h-9 mr-4 lg:hidden`}
+      />
       <div className="mt-5 w-fit h-max">
         <Svg className="h-32 w-32 fill-[#9D75F7]" />
       </div>
