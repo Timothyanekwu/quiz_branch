@@ -1,7 +1,11 @@
-import React from "react";
+
+import React from "react"
 
 const Quizzes = () => {
-  return <div>Quizzes</div>;
-};
+  return (
+    <div>Quizzes</div>
+  )
+}
 
-export default Quizzes;
+export default Quizzes
+
