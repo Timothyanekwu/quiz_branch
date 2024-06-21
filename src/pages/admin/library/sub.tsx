@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Add, Dropdown, Filter } from "../../../../public/assets/icons";
 
 const Sub = () => {

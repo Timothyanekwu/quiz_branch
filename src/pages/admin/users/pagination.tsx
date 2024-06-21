@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { Direction } from "../../../../public/assets/icons";
 
 const Pagination = () => {
   return (
@@ -11,22 +11,11 @@ const Pagination = () => {
         <p>1 to 4 of 10</p>
         <div className="ml-2 flex h-full">
           <div className="p-2 bg-[#E6E6E6] w-9 rounded-md h-full">
-            <Image
-              src="/assets/direction.svg"
-              alt="direction"
-              width={18}
-              height={18}
-            />
+            <Direction />
           </div>
 
           <div className="p-2 bg-[#E6E6E6] w-9 rounded-md h-full ml-2">
-            <Image
-              src="/assets/direction.svg"
-              alt="direction"
-              width={18}
-              height={18}
-              className="rotate-180"
-            />
+            <Direction className="rotate-180" />
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { Avatar } from "@chakra-ui/react";
-import Image from "next/image";
-import { Bell, Burger, Cloud } from "../../../public/assets/icons";
+import { Bell, Burger, Cloud, Search } from "../../../public/assets/icons";
 
 interface Datas {
   view: boolean;
@@ -18,17 +17,7 @@ const Header: React.FC<Datas> = ({ setView, view }) => {
         />
 
         <InputGroup className="bg-[#E6E6E6] rounded-full">
-          <InputLeftElement
-            pointerEvents="none"
-            children={
-              <Image
-                alt="search"
-                width={24}
-                height={24}
-                src="/assets/search.svg"
-              />
-            }
-          />
+          <InputLeftElement pointerEvents="none" children={<Search />} />
           <Input
             type="search"
             placeholder="Search..."
