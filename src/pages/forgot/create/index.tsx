@@ -1,13 +1,13 @@
 import React from "react";
 import CreateForm from "./createForm";
-import QuizSVG from "../../../../public/assets/svg/svg";
+import { Svg } from "../../../../public/assets/icons";
 
 const Login = () => {
   return (
     <div className="bg-color h-screen w-screen flex justify-center items-center">
       <div>
         <div className="flex justify-center mb-16 sm:mb-5 ">
-          <QuizSVG />
+          <Svg />
         </div>
         <div>
           <CreateForm />
