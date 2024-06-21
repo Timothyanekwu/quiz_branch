@@ -32,47 +32,53 @@ const TableSection: React.FC<TableSectionProps> = ({ heading, body }) => {
               backgroundColor="#E6E6E6"
               color="#656565"
             >
-              {heading.map((field, index) => (
-                <Th
-                  key={field}
-                  sx={{ textTransform: "capitalize" }}
-                  borderLeftRadius={index === 0 ? "40px" : "0px"}
-                  borderRightRadius={
-                    index === heading.length - 1 ? "40px" : "0px"
-                  }
-                  fontSize="sm"
-                >
-                  {field}
-                </Th>
-              ))}
+              {heading.map((field, index) => {
+                return (
+                  <Th
+                    key={field}
+                    sx={{ textTransform: "capitalize" }}
+                    borderLeftRadius={index === 0 ? "40px" : "0px"}
+                    borderRightRadius={
+                      index === heading.length - 1 ? "40px" : "0px"
+                    }
+                    fontSize="sm"
+                  >
+                    {field}
+                  </Th>
+                );
+              })}
             </Tr>
           </Thead>
           <Tbody>
-            {body.map((data, rowIndex) => (
-              <Tr key={rowIndex} fontSize="0.75rem">
-                {Object.values(data).map((item, colIndex) => (
-                  <Td key={`${rowIndex}-${colIndex}`}>{item}</Td>
-                ))}
-                {router.pathname.endsWith("/library") && (
-                  <Td>
-                    <div className="flex">
-                      <div className="bg-[#E6E6E6] rounded-full p-2">Users</div>
-                      <div className="bg-[#E6E6E6] rounded-full p-2 ml-2">
-                        Tag #3
+            {body.map((data, rowIndex) => {
+              return (
+                <Tr key={rowIndex} fontSize="0.75rem">
+                  {Object.values(data).map((item, colIndex) => {
+                    return <Td key={`${rowIndex}-${colIndex}`}>{item}</Td>;
+                  })}
+                  {router.pathname.endsWith("/library") && (
+                    <Td>
+                      <div className="flex">
+                        <div className="bg-[#E6E6E6] rounded-full p-2">
+                          Users
+                        </div>
+                        <div className="bg-[#E6E6E6] rounded-full p-2 ml-2">
+                          Tag #3
+                        </div>
                       </div>
-                    </div>
-                  </Td>
-                )}
-                <Td display="flex">
-                  {router.pathname.endsWith("/library") ? <Edit /> : <Tick />}
-                  {router.pathname.startsWith("/library") ? (
-                    <Download />
-                  ) : (
-                    <Delete />
+                    </Td>
                   )}
-                </Td>
-              </Tr>
-            ))}
+                  <Td display="flex">
+                    {router.pathname.endsWith("/library") ? <Edit /> : <Tick />}
+                    {router.pathname.startsWith("/library") ? (
+                      <Download />
+                    ) : (
+                      <Delete />
+                    )}
+                  </Td>
+                </Tr>
+              );
+            })}
           </Tbody>
         </Table>
       </TableContainer>
