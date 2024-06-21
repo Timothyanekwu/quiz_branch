@@ -18,7 +18,10 @@ interface TableSectionProps {
   body: Record<string, string | number>[];
 }
 
-const TableSection: React.FC<TableSectionProps> = ({ heading, body }) => {
+const TableSection: React.FC<TableSectionProps> = ({
+  heading = [],
+  body = [],
+}) => {
   const router = useRouter();
 
   return (
@@ -35,7 +38,7 @@ const TableSection: React.FC<TableSectionProps> = ({ heading, body }) => {
               {heading.map((field, index) => {
                 return (
                   <Th
-                    key={field}
+                    key={index}
                     sx={{ textTransform: "capitalize" }}
                     borderLeftRadius={index === 0 ? "40px" : "0px"}
                     borderRightRadius={
